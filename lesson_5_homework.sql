@@ -92,7 +92,7 @@ WHERE cost < lead_cost;
  SELECT *, 
 cost - lead_cost AS 'dif'
 FROM
-(
+ (
  SELECT *, 
  LEAD(cost) OVER() AS `lead_cost`
  FROM cars
